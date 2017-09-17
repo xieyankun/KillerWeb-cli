@@ -1,9 +1,9 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
-var config = require('../config').less;
+var path = require('../config');
 
 gulp.task('less', function(){
-    return gulp.src(config.src)         //less源文件
-        .pipe(less())                   //执行编译
-        .pipe(gulp.dest(config.dest))   //输出目录
+    return gulp.src(path.srcPath.less + '/**/*.less')   //less源文件
+        .pipe(less())                                   //执行编译
+        .pipe(gulp.dest(path.distPath.css))             //输出目录
 });
