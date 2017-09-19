@@ -11,11 +11,11 @@ var path = require('../config');
 
 // 拷贝外部的css样式
 gulp.task('css', function () {
-    return gulp.src([path.srcPath.css + '/*', '!' + path.srcPath.css + '/*.css'])
+    return gulp.src([path.srcPath.css + '/**/*', '!' + path.srcPath.css + '/*.css'])
         .pipe(gulp.dest(path.distPath.css))
 });
 
-gulp.task('sassRelease', function () {
+gulp.task('sassRelease', ['css'], function () {
     return gulp.src(path.srcPath.sass + '/**/*.scss')
         .pipe(debug({title: '编译:'}))
         .pipe(sass({ outputStyle: 'compressed' })   // 压缩
