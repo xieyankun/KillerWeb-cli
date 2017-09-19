@@ -8,7 +8,7 @@ var distPath = path.distPath.html;
 
 gulp.task('html', function() {
     return gulp.src(srcPath + '/**/*.html')
-        .pipe(debug({title: '编译:'}))
+        .pipe(debug({title: '编译html:'}))
         .pipe(changed(distPath, {extension:'.html'}))
         .pipe(gulp.dest(distPath));
 });
