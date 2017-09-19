@@ -8,6 +8,8 @@ gulp.task('watch', function(){
     gulp.watch( path.srcPath.html + '/**/*.html', ['html'] )
     // 处理 scss
     gulp.watch( path.srcPath.scss + '/**/*.scss', ['sass'] )
+    // 监听 images
+    gulp.watch( path.srcPath.image + '/**/*' , ['image'] );
     // 处理 script
     gulp.watch( path.srcPath.script + '/**/*.js', ['script'] )
 })

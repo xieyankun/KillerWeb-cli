@@ -5,8 +5,7 @@ var path = require('../config');
 
 // 本地服务器
 gulp.task('webserver', function() {
-    console.log(path)
-    gulp.src( path.distPath.html )  // 服务器目录（.代表根目录）
+    gulp.src( path.srcPath.html )   // 服务器目录（.代表根目录）
     .pipe(webserver({               // 运行gulp-webserver
         livereload: true,           // 启用LiveReload
         open: true                  // 服务器启动时自动打开网页
