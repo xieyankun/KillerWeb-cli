@@ -4,6 +4,6 @@
 */
 var gulp = require('gulp');
 
-gulp.task('deploy', ['clean'], function(){                          // 开始任务前会先执行[clean]任务
-    return gulp.start('sassRelease','scriptRelease','images');      // 等[clean]任务执行完毕后再执行其他任务
+gulp.task('release', ['clean'], function(){                          // 开始任务前会先执行[clean]任务
+    return gulp.start('sassRelease','scriptRelease','image', 'html');      // 等[clean]任务执行完毕后再执行其他任务
 })
