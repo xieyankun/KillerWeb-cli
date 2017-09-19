@@ -4,6 +4,7 @@ module.exports = {
         html    : './src',
         css     : './src/css',
         sass    : './src/sass',
+        less    : './src/less',
         script  : './src/js',
         image   : './src/images'
     },

@@ -8,9 +8,10 @@ var sass = require('gulp-sass');
 var path = require('../config');
 var source = [
         path.srcPath.html + '/**/*', 
-        '!' + path.srcPath.sass + '/**/*'
+        '!' + path.srcPath.sass + '/**/*',
+        '!' + path.srcPath.less + '/**/*'
     ]
-gulp.task('preview', function(){
+gulp.task('preview', ['clean'], function(){          // 开始任务前会先执行[clean]任务
     return gulp.src(source)
-        .pipe(gulp.dest(path.distPath.html))
+        .pipe(gulp.dest(path.distPath.html))         //  拷贝到指定目录
 })
