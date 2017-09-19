@@ -10,12 +10,12 @@ var debug = require('gulp-debug');
 var path = require('../config');
 
 // 拷贝外部的css样式
-gulp.task('css', function () {
+gulp.task('cpCss', function () {
     return gulp.src([path.srcPath.css + '/**/*', '!' + path.srcPath.css + '/*.css'])
         .pipe(gulp.dest(path.distPath.css))
 });
 
-gulp.task('sassRelease', ['css'], function () {
+gulp.task('sassRelease', ['cpCss'], function () {
     return gulp.src(path.srcPath.sass + '/**/*.scss')
         .pipe(debug({title: '编译:'}))
         .pipe(sass({ outputStyle: 'compressed' })   // 压缩
