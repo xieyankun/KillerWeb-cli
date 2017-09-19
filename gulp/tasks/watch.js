@@ -7,9 +7,9 @@ gulp.task('watch', function(){
     // 处理 html
     gulp.watch( path.srcPath.html + '/**/*.html', ['html'] )
     // 处理 scss
-    gulp.watch( path.srcPath.scss + '/**/*.scss', ['sass'] )
+    gulp.watch( path.srcPath.sass + '/**/*.scss', ['sass'] )
     // 监听 images
-    gulp.watch( path.srcPath.image + '/**/*' , ['image'] );
+    gulp.watch( path.srcPath.image + '/**/*' , ['image'] )
     // 处理 script
     gulp.watch( path.srcPath.script + '/**/*.js', ['script'] )
 })
